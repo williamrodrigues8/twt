@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preenchimento de cheque</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <header>
+        <form action="" class="container-form">
+
+            <div class="comp">
+                <b>Comp</b>
+                <input type="text" id="input-comp-header" placeholder="999" min="1" max="999"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /
+                maxlength="3">
+            </div>
+
+            <div class="banco">
+                <b>Banco</b>
+                <input type="text" id="input-banco-header" placeholder="999" min="1" max="999"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /
+                maxlength="3">
+            </div>
+
+            <div class="agencia">
+                <b>Agência</b>
+                <input type="text" id="input-agencia-header" placeholder="9999" min="1" max="999"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /
+                maxlength="4">
+            </div>
+
+            <div class="c1">
+                <b>C1</b>
+                <input type="text" id="input-c1-header" placeholder="9" min="1" max="999"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /
+                maxlength="1">
+            </div>
+
+            <div class="conta">
+                <b id="txt-conta">Número da Conta</b>
+                <input type="text" id="input-conta-header" placeholder="99999-9" min="1" max="999"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '-').replace(/(\..*?)\..*/g, '$1');" /
+                maxlength="7">
+            </div>
+
+            <div class="c2">
+                <b>C2</b>
+                <input type="text" id="input-c2-header" placeholder="9" min="1" max="999"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /
+                maxlength="1">
+            </div>
+
+            <div class="cheque">
+                <b id="txt-cheque">Número do Cheque</b>
+                <input type="text" id="input-cheque-header" placeholder="999999" min="1" max="999"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /
+                maxlength="6">
+            </div>
+
+            <div class="c3">
+                <b>C3</b>
+                <input type="text" id="input-c3-header" placeholder="9" min="1" max="999"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /
+                maxlength="1">
+            </div>
+
+            <div class="valor">
+                <b>R$</b>
+                <input type="text" id="money" placeholder="Digite o Valor" onKeyUp="mascaraMoeda(this, event)" onchange="extensotext(event)" required>
+            </div>
+
+        </form>
+    </header>
+
+    <main class="container-main">
+        <div class="valor-extenso">
+        <span class="tittle-span">Pague por este<br>cheque a quantia de:
+            <span id="porExtenso"></span>
+        </span>
+    </div>
+    </main>
+
+    <aside class="container-aside">
+        <img src="../img/logo_banco_1080px.png" alt="logobanco">
+        <div class="options-banco">
+            <h3>Banco:</h3>
+            <h3>Endereço:</h3>
+            <h3>Estado - UF:</h3>
+        </div>
+    </aside>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
